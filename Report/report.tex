@@ -1,0 +1,114 @@
+% report.tex - Frontpage for the report (place in Report/)
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{ulem}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{makecell}
+\geometry{margin=2.5cm}
+
+\begin{document}
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{2cm}
+
+    % Logos at the corners
+    \begin{figure}[t]
+        \begin{minipage}{.3\textwidth}
+            \includegraphics{logos/eik_lab_logo.jpeg}
+        \end{minipage}\hfill
+        \begin{minipage}{.3\textwidth}
+            \hspace*{-0.3\textwidth}
+            \includegraphics{logos/nmbu_logo.png}
+        \end{minipage}\hfill
+    \end{figure}
+    %\includegraphics[width=0.35\textwidth]{logos/eik_lab_logo.jpeg}\\[1.5cm]
+
+    {\Huge\bfseries Project Louis}\\[0.5cm]
+    {\Large\itshape Articulated Robot Arm}\\[1.5cm]
+    {\Large\itshape Funded by Eik Lab (pretty please)}\\[1.5cm]
+
+    \rule{0.6\textwidth}{1pt}\\[0.8cm]
+
+    {\Large\bfseries Authors}\\[0.3cm]
+    {\large Andreas Brustad \\ Johannes Standal}\\[1cm]
+
+    %{\large\bfseries Supervisor}\\[0.3cm]
+    %{\large Dr. Supervisor Name}\\[2cm]
+
+    {}
+
+    \vfill
+
+    \small Eik Lab \\
+    Norwegian University of Life Sciences
+\end{titlepage}
+
+\section{Introduction}
+
+Our goal for the first iteration of the project is to create a functional
+proof of concept for an articulated robot arm, with a task space in $\mathbb{R}^3$. We will be utilizing tools
+we don't yet know how to use in order to learn. These are tools that
+we plan to keep using for future iterations, meaning that keeping the first iteration
+simple for learning is key for future success. Therefore, the first iteration will be
+an extremely simplified model of an articulated robot arm, to the point where it might not
+fit the definition. However, through future iterations and learning the complexity
+of the project will also increase accordingly.
+\\\\
+We want to have a transrotational joint at the base, along with a rotational joint
+at the start of the arm, and another at the halfway point of the arm. That way we get
+orientational control about the base, and positional control of the end of the arm.
+To accomplish this for the first iteration we will utilize servo motors for their
+convenient blend of functionality and ease of use. We will also have a basic gripper
+which will be controlled by a single servo utilizing a gear mechanism.
+\\\\
+For actual functionality we want the arm to be able to perform basic movement controlled
+by an XBox controller or similar. Control the movement with the joysticks and control the gripper
+with a button.
+
+% Bill of materials
+\section{BOM}
+\begin{center}
+    \bgroup
+    \def\arraystretch{1.5}
+    \hspace*{-1.6cm}
+    \begin{tabular}{| c | c | c | c | c |}
+        \hline
+        Component & Function & Model & Reason & Amount \\
+        \hline\hline
+        \makecell{STM32 \\ Microcontroller} & \makecell{Provides \\ electrical \\ signals} & STM32 & \makecell{Functions as the "hub" of \\ all electricity in the project. \\ Can deliver what we need on command.} & 1 \\
+        \hline
+        \makecell{Single Board \\ Computer \\ (SBC)} & \makecell{Provides \\ Computational \\ Power} & Raspberry Pi 5 & \makecell{Functions as the "hub" of \\ all complex computation \\ and mathematics \\ in the project} & 1 \\
+        \hline
+        Servo & Rotation & DS3218MG & Provides movement control & 4 \\
+        \hline
+        Breadboard & Wire hub & & \makecell{Provides a versatile way to \\ prototype electrical circuits} & 1 \\
+        \hline
+    \end{tabular}
+    \egroup
+\end{center}
+
+\section{Robot arm sketch}
+Witness the true artistry of Johannes Standal (Painted by hand (trackpad) using MS Paint)
+
+\section{Project links}
+\href{https://github.com/JohannesStandal/Eik---Project-Louis}{Github}
+
+\end{document}
