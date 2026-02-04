@@ -71,14 +71,17 @@ simple for learning is key for future success. Therefore, the first iteration wi
 an extremely simplified model of an articulated robot arm, to the point where it might not
 fit the definition. However, through future iterations and learning the complexity
 of the project will also increase accordingly.
-\\\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/sketch3.png}
+    \caption{Truly artistic sketch handpainted by Johannes with trackpad and MS Paint}
+\end{figure}
 We want to have a transrotational joint at the base, along with a rotational joint
 at the start of the arm, and another at the halfway point of the arm. That way we get
 orientational control about the base, and positional control of the end of the arm.
 To accomplish this for the first iteration we will utilize servo motors for their
 convenient blend of functionality and ease of use. We will also have a basic gripper
 which will be controlled by a single servo utilizing a gear mechanism.
-\\\\
 For actual functionality we want the arm to be able to perform basic movement controlled
 by an XBox controller or similar. Control the movement with the joysticks and control the gripper
 with a button.
@@ -97,7 +100,9 @@ with a button.
         \hline
         \makecell{Single Board \\ Computer \\ (SBC)} & \makecell{Provides \\ Computational \\ Power} & Raspberry Pi 5 & \makecell{Functions as the "hub" of \\ all complex computation \\ and mathematics \\ in the project} & 1 \\
         \hline
-        Servo & Rotation & DS3218MG & Provides movement control & 4 \\
+        Servo & Rotation & DS3218MG & Provides movement control & 3 \\
+        \hline
+        Servo & Gripping & MG90S & Provides gripper control & 2 \\
         \hline
         Breadboard & Wire hub & & \makecell{Provides a versatile way to \\ prototype electrical circuits} & 1 \\
         \hline
@@ -105,10 +110,7 @@ with a button.
     \egroup
 \end{center}
 
-\section{Robot arm sketch}
-Witness the true artistry of Johannes Standal (Painted by hand (trackpad) using MS Paint)
-
 \section{Project links}
-\href{https://github.com/JohannesStandal/Eik---Project-Louis}{Github}
+\url{https://github.com/JohannesStandal/Eik---Project-Louis}
 
 \end{document}
