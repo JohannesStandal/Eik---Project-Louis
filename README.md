@@ -9,3 +9,4 @@
 <p>
 Louis is an ongoing student project in order to develop an articulated robot arm with a task space in SE(3). Our goal is to learn general robotics and kinematics, with focus on experimenting rather than a good first result. Utilizing an iterative design approach we hope to learn enough in order to produce a small scale articulated robotic arm, with industry standards
 </p>
+<a href="https://www.researchgate.net/publication/381174751_CONSTRUCTION_OF_A_ROBOTIC_ARM">Report used for guidance</a>
