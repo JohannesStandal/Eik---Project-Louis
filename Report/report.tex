@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{eso-pic}
 \usepackage{geometry}
 \usepackage{parskip}
 \usepackage{setspace}
@@ -31,18 +32,17 @@
 
     % Logos at the corners
     \begin{figure}[t]
-        \begin{minipage}{.3\textwidth}
-            \includegraphics{logos/eik_lab_logo.jpeg}
-        \end{minipage}\hfill
-        \begin{minipage}{.3\textwidth}
-            \hspace*{-0.3\textwidth}
-            \includegraphics{logos/nmbu_logo.png}
-        \end{minipage}\hfill
+        \centering
+        \includegraphics[width=0.6\textwidth]{logos/nmbu_logo_tekst.jpeg}
     \end{figure}
     %\includegraphics[width=0.35\textwidth]{logos/eik_lab_logo.jpeg}\\[1.5cm]
 
     {\Huge\bfseries Project Louis}\\[0.5cm]
     {\Large\itshape Articulated Robot Arm}\\[1.5cm]
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.3\textwidth]{logos/eik_lab_logo.jpeg}
+    \end{figure}
     {\Large\itshape Funded by Eik Lab (pretty please)}\\[1.5cm]
 
     \rule{0.6\textwidth}{1pt}\\[0.8cm]
@@ -61,6 +61,15 @@
     Norwegian University of Life Sciences
 \end{titlepage}
 
+% Eik lab watermark
+\AddToShipoutPictureBG{%
+  \AtPageUpperLeft{%
+    \raisebox{-2.5cm}{%
+      \hspace{1.072\textwidth}%
+      \includegraphics[width=2cm]{logos/eik_lab_logo.jpeg}
+    }%
+  }%
+}
 \section{Introduction}
 
 Our goal is to create a simple proof of concept for an articulated robot arm, with the 
