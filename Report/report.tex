@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
 \usepackage{eso-pic}
+\usepackage[HTML]{xcolor}
+\usepackage{tikz}
 \usepackage{geometry}
 \usepackage{parskip}
 \usepackage{setspace}
@@ -22,7 +24,18 @@
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{makecell}
+
 \geometry{margin=2.5cm}
+
+\AddToShipoutPictureBG{
+  \definecolor{sidebar}{HTML}{008571}
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[sidebar]
+    (current page.north west)
+    rectangle
+    ([xshift=1.2cm]current page.south west);
+  \end{tikzpicture}
+}
 
 \begin{document}
 \begin{titlepage}
