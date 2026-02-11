@@ -88,23 +88,22 @@
 Some tasks heavily rely on human intuition and coordination, making them difficult to fully automate.
 However, these tasks can also be dangerous, and require high precision. 
 While the task can't be fully automated, robotics can provide mitigation of risk factors such as exposure to
-dangerous chemicals, radiation, electricity and moving parts.
+dangerous chemicals, radiation, electricity and moving parts. 
+The goal of this project is to produce a teleoperated robot arm, protecting humans from hazardous environments. 
 
-\section{Our solution}
+\section{Final vison}
 Our approach for this project is to create a robot arm mimicking a human hand. It will be remote controlled
 by haptic gloves akin to \href{https://github.com/LucidVR/lucidgloves}{lucid gloves}, and provide a feedback
 loop that ensures finger resistance matching the robots grip.
 This will provide high levels of intuition when dealing with problems outlined in our motivation.
-For rotational tracking we intend to utilize an IMU. For positional tracking however, the standard so far has been
-utilizing "lighthouse trackers", though that seems to be changing. Depending on how the technology evolves in
-the next year, we intend to use either lighthouse tracking or inside out tracking from a VR headset such as
-the yet to be released Steam Frame for position.
+For rotational tracking we intend to utilize an IMU. For positional tracking we intend to follow the evolving
+standards of the VR industry.
 
 \section{First iteration / Proof of concept}
 
 We will create an articulated robot arm, with the 
-ability to operate in the task space of $\mathbb{R}^3$.
-It will be remote controlled using a simple game controller (xbox, playstation, etc). 
+ability to operate in the task space of $\mathbb{R}^3$, focusing on kinematics and remote control.
+It will be controlled using a simple game controller (xbox, playstation, etc). 
 Featuring methods like forward and inverse kinematics the robot will have multiple 
 control modes. These will be an angular control system and a positional system in our task space
 related to the robot base coordinate system.
@@ -125,8 +124,8 @@ operate in task space in $\mathbb{R}^3$.
 
 % Bill of materials
 \section{Requested starting capital}
-We already located all the necessary electronic components wich makes up most of the projects cost (see BOM in github).
-Remaining costs include 3D printing filament and wires. We estimate a total filament cost 1000kr.
+We already got our hands on the electronic components, which makes up most of the projects cost (BOM in github).
+We request an additional 1000kr to cover 3D printing costs.
 
 \section{Project links}
 \url{https://github.com/JohannesStandal/Eik---Project-Louis}
