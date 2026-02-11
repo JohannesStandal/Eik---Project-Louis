@@ -83,9 +83,19 @@
     }%
   }%
 }
+
+\section{Motivation}
+Our motivation for this project is to create a remote controlled robot arm mimicking a human hand. This is to
+provide high levels of intuition when dealing with problems that need precision and a high degree of mobility,
+but are potentially too harmful for a human to handle directly. For the controllers we intend to utilize
+haptic glove technology akin to the \href{https://github.com/LucidVR/lucidgloves}{lucid gloves},
+and provide a feedback loop that ensures resistance on the human fingers along with the robot fingers.
+It will utilize IMU based rotational tracking, and depending on what VR standards are in the next year,
+it will either utilize lighthouse tracking or inside out tracking from a VR headset for positional tracking.
+
 \section{Introduction}
 
-Our goal is to create a simple proof of concept for an articulated robot arm, with the 
+Our first goal is to create a simple proof of concept for an articulated robot arm, with the 
 ability to operate in the task space of $\mathbb{R}^3$. Utilizing iterative development strategies
 we will research and learn new tools in order to deepen our understanding of robotics. 
 Our aim is a robust project utilizing industry standard notation, protocols and user 
