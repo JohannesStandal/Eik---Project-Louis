@@ -85,15 +85,22 @@
 }
 
 \section{Motivation}
-Our motivation for this project is to create a remote controlled robot arm mimicking a human hand. This is to
-provide high levels of intuition when dealing with problems that need precision and a high degree of mobility,
-but are potentially too harmful for a human to handle directly. For the controllers we intend to utilize
-haptic glove technology akin to the \href{https://github.com/LucidVR/lucidgloves}{lucid gloves},
-and provide a feedback loop that ensures resistance on the human fingers along with the robot fingers.
-It will utilize IMU based rotational tracking, and depending on what VR standards are in the next year,
-it will either utilize lighthouse tracking or inside out tracking from a VR headset for positional tracking.
+Some tasks heavily rely on human intuition and coordination, making them difficult to fully automate.
+However, these tasks can also be dangerous, and require high precision. 
+While the task can't be fully automated, robotics can provide mitigation of risk factors such as exposure to
+dangerous chemicals, radiation, electricity and moving parts.
 
-\section{Introduction}
+\section{Our solution}
+Our approach for this project is to create a robot arm mimicking a human hand. It will be remote controlled
+by haptic gloves akin to \href{https://github.com/LucidVR/lucidgloves}{lucid gloves}, and provide a feedback
+loop that ensures finger resistance matching the robots grip.
+This will provide high levels of intuition when dealing with problems outlined in our motivation.
+For rotational tracking we intend to utilize an IMU. For positional tracking however, the standard so far has been
+utilizing "lighthouse trackers", though that seems to be changing. Depending on how the technology evolves in
+the next year, we intend to use either lighthouse tracking or inside out tracking from a VR headset such as
+the yet to be released Steam Frame for position.
+
+\section{First iteration}
 
 Our first goal is to create a simple proof of concept for an articulated robot arm, with the 
 ability to operate in the task space of $\mathbb{R}^3$. Utilizing iterative development strategies
@@ -118,7 +125,7 @@ operate in task space in $\mathbb{R}^3$ bounded by our servo's angle limitations
 The robot should be remote controlled by a controller with joystick / trackpad functionality as well
 as buttons for functions such as closing / opening the claw. The program should also be equipped with methods for
 both forward kinematics and numerical inverse kinematics. Utilizing this we can select arm positions in $\mathbb{R}^3$ space.
-The claw should be self aligned to always match the xy-plane of our robots base. This will allow simple grab operations  
+The claw should be self aligned to always match the xy-plane of our robots base. This will allow simple grab operations.
 
 % Bill of materials
 \section{BOM}
