@@ -24,6 +24,12 @@
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{makecell}
+\usepackage[
+backend=biber,
+style=alphabetic,
+sorting=ynt
+]{biblatex}
+\addbibresource{bibliography/bibliography.bib}
 
 \geometry{margin=2.5cm}
 
@@ -110,7 +116,7 @@ standards of the VR industry.
 \section{Learning goals for first iteration}
 
 For the first iteration we aim to learn how to design functional parts in CAD software
-and basic STM32 usage. We also aim to test the e-flesh sensor \cite{eFlesh} for automatic
+and basic STM32 usage. We also aim to test the e-flesh sensor \cite{pattabiraman2025eflesh} for automatic
 adjustment of grip strength. With respect to these rather simplistic goals, and considering
 our own lack of knowledge, we have decided to make our own simple design rather than following
 a more advanced recipe. With the basic knowledge gained from this first iteration, we can
@@ -153,5 +159,7 @@ Before June:
 
 \section{Project links}
 \url{https://github.com/JohannesStandal/Eik---Project-Louis}
+
+\printbibliography
 
 \end{document}
