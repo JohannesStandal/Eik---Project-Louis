@@ -99,6 +99,23 @@ This will provide high levels of intuition when dealing with problems outlined i
 For rotational tracking we intend to utilize an IMU. For positional tracking we intend to follow the evolving
 standards of the VR industry.
 
+\section{Learning goals for project}
+\begin{itemize}
+  \item Learn how to use advanced sensors for data tracking and communication (e-flesh, IMU, etc)
+  \item Learn how to utilize forward and inverse kinematics for a robot arm
+  \item Learn what the industry standards are and how to utilize them (ROS, STM32, etc)
+  \item Learn what tools exist to aid us in the project, and how to utilize them (soldering, 3D-printing, etc)
+\end{itemize}
+
+\section{Learning goals for first iteration}
+
+For the first iteration we aim to learn how to design functional parts in CAD software
+and basic STM32 usage. We also aim to test the e-flesh sensor \cite{eFlesh} for automatic
+adjustment of grip strength. With respect to these rather simplistic goals, and considering
+our own lack of knowledge, we have decided to make our own simple design rather than following
+a more advanced recipe. With the basic knowledge gained from this first iteration, we can
+better judge what the best path forward afterwards is.
+
 \section{First iteration / Proof of concept}
 
 We will create an articulated robot arm, with the 
@@ -108,24 +125,31 @@ Featuring methods like forward and inverse kinematics the robot will have multip
 control modes. These will be an angular control system and a positional system in our task space
 related to the robot base coordinate system.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.15\textwidth]{images/sketch3.png}
-    \caption{Truly artistic sketch handpainted by Johannes with trackpad and MS Paint}
-\end{figure}
+\section{Timeline first iteration}
+Before March:
+\begin{itemize}
+  \item Set up software for STM32 programming
+  \item Learn basic STM32 programming
+  \item Set up the ability to control servos with STM32
+  \item Learn basic Fusion skills
+  \item Learn 3D-printing
+\end{itemize}
 
-The articulated arm will consist of rigid bodies and rotational joints, 
-following TRR anatomy. Using a transrotational joint at the base, followed by two rotational joints for our arm. 
-The end effector will be equipped with a simple claw attached to a rotational joint.
+Before April:
+\begin{itemize}
+  \item Have the physical arm ready with servo control and a gripping mechanism
+  \item Have a functional e-flesh sensor on the gripping mechanism
+\end{itemize}
 
-For the first iteration we will use servo motors as they have the benefit of setting angles with high precicion. 
-The servo motors angle limitations will somewhat affect our task space, however it will still be able to 
-operate in task space in $\mathbb{R}^3$. 
+Before May:
+\begin{itemize}
+  \item You should be able to control the arm with a game controller
+\end{itemize}
 
-% Bill of materials
-\section{Requested starting capital}
-We already got our hands on the electronic components, which makes up most of the projects cost (BOM in github).
-We request an additional 1000kr to cover 3D printing costs.
+Before June:
+\begin{itemize}
+  \item The arm should be able to move the gripper to a specific point based on input coordinates
+\end{itemize}
 
 \section{Project links}
 \url{https://github.com/JohannesStandal/Eik---Project-Louis}
